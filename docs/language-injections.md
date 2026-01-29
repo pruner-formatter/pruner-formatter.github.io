@@ -1,4 +1,4 @@
-# About Language Injections
+# Language Injections
 
 Pruner uses tree-sitter injection queries (`injections.scm`) to find regions in your document containing other embedded
 languages. These are typically shipped alongside grammars and are automatically included when loading the grammar for
@@ -14,4 +14,4 @@ not defined in an official grammar.
 Pruner loads language injection queries from the configured query "search paths" by resolving
 `<query_path>/<language>/injections.scm`.
 
-Next: [Customizing Injections](./customizing-injections.md).
+Next: [Customizing Injections](./language-injections/customizing-injections.md).

@@ -1,12 +1,4 @@
-<div align="center">
-  <h1>Pruner</h1>
-  <p>
-    A language-agnostic, TreeSitter-powered formatter for your code.
-  </p>
-
-</div>
-
-## What
+# Introduction
 
 Pruner is a language and editor agnostic formatter which allows encapsulating all the formatting rules of your project
 behind a shared, re-usable piece of config. It is designed in such a way as to allow leveraging all the existing,
@@ -38,11 +30,9 @@ Pruner reads from stdin and writes to stdout.
 cat hello.md | pruner format --lang markdown > hello.md
 ```
 
-Run `--help` for more information.
+Run `--help` for more information, or head to the **[Quick Start](./quickstart)** to get up-to-speed.
 
 ## Acknowledgements
 
-Thanks to
-
-- [stevearc/conform.nvim](https://github.com/stevearc/conform.nvim/) For being the driving inspiration for Pruners
-  config and approach to formatter composition.
+Thanks to [stevearc/conform.nvim](https://github.com/stevearc/conform.nvim/) For being a large driving inspiration
+behind Pruners config and approach to formatter composition.

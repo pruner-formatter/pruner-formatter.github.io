@@ -1,6 +1,6 @@
 # Writing a Plugin in Rust
 
-Here is a short reference on how to write a plugin for Pruner in Rust. For this we will reimplement the
+This is a short reference on how to write a plugin for Pruner in Rust. For this we will reimplement the
 [trim-newlines](https://github.com/pruner-formatter/plugin-trim-newlines) plugin which makes for a perfect, simple
 example. Head over to that repository to see the end result of this document.
 
@@ -58,7 +58,7 @@ cargo build --release --target wasm32-wasip2
 ```
 
 Which will output a compiled plugin to `target/wasm32-wasip2/release/trim_newlines.wasm` that is ready to be loaded up
-and called by Pruner. Lets add it into our Pruner config:
+and called by Pruner. Let's add it into our Pruner config:
 
 ## Configure Pruner to use it
 
@@ -114,4 +114,4 @@ pruner_plugin_api::bindings::export!(Component);
 ```
 
 Recompile with `cargo build --release --target wasm32-wasip2` and we are done. Newlines will now be trimmed from our
-markdown files!
+Markdown files!

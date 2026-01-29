@@ -5,6 +5,10 @@ export default defineConfig({
   title: "Pruner",
   description: "A language-agnostic, TreeSitter-powered formatter",
   themeConfig: {
+    search: {
+      provider: "local",
+    },
+
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
@@ -15,15 +19,16 @@ export default defineConfig({
       {
         text: "Pruner",
         items: [
-          { text: "About", link: "/introduction" },
+          { text: "Introduction", link: "/introduction" },
           { text: "Installation", link: "/installation" },
+          { text: "Quick Start", link: "/quickstart" },
           { text: "Configuration", link: "/configuration" },
         ],
       },
       {
         text: "Language Injections",
         items: [
-          { text: "About", link: "/language-injections/about" },
+          { text: "Overview", link: "/language-injections" },
           {
             text: "Query Directives",
             link: "/language-injections/query-directives",
@@ -37,8 +42,22 @@ export default defineConfig({
       {
         text: "Plugins",
         items: [
-          { text: "About", link: "/plugins/about" },
+          { text: "Overview", link: "/plugins" },
           { text: "Writing Plugins", link: "/plugins/writing-plugins" },
+          {
+            text: "Official Plugins",
+            collapsed: true,
+            items: [
+              {
+                text: "plugin-trim-newlines",
+                link: "https://github.com/pruner-formatter/plugin-trim-newlines",
+              },
+              {
+                text: "plugin-clojure-comment-formatter",
+                link: "https://github.com/pruner-formatter/plugin-clojure-comment-formatter",
+              },
+            ],
+          },
         ],
       },
       {

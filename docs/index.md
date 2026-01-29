@@ -4,32 +4,25 @@ layout: home
 hero:
   name: "Pruner"
   text: "A TreeSitter-powered formatter"
-  tagline: "Compose existing language formatters, and format embedded languages reliably."
+  tagline: "An extensible, language agnostic formatter that understands embedded languages."
   actions:
     - theme: brand
-      text: What is Pruner
+      text: Introduction
       link: /introduction
     - theme: alt
-      text: Getting Started
-      link: /getting-started
+      text: Quick Start
+      link: /quickstart
     - theme: alt
       text: GitHub
       link: https://github.com/pruner-formatter/pruner
 
 features:
-  - title: Embedded Languages
-    details: Format code blocks, strings, templates, and other injected regions with the right toolchain.
+  - title: Embedded/Injected Languages
+    details: Format code blocks, strings, templates, and other injected language regions with the right formatter.
   - title: Composable Pipelines
-    details: Define language pipelines in TOML and reuse them across projects and editors.
+    details: Define multi-language pipelines and reuse them across projects, editors, and CI.
   - title: WASM Plugins
-    details: Add project-specific formatting rules, or new formatters, via shareable WASM components.
+    details: Extend Pruner with project-specific formatting rules or new formatters via reusable WASM components.
 ---
 
-## Quick Start
-
-```bash
-brew install pruner-formatter/tap/pruner
-cat README.md | pruner format --lang markdown > README.md
-```
-
-Prefer the full overview? Read the docs at [Introduction](./introduction.md).
+Read the docs at [Introduction](./introduction.md).

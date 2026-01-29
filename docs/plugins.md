@@ -1,4 +1,4 @@
-# About Plugins
+# Plugins
 
 Pruner plugins enable writing formatting behaviour in a way that is fast, versioned, and shareable. A plugin is
 essentially just a bundled function that takes source code in and returns altered source code. As Pruner evolves I do
@@ -28,5 +28,5 @@ Feel free to open a PR contributing your own plugin(s)!
 
 See:
 
-- **[Writing plugins](./writing-plugins.md)**
-- **[Writing a plugin in Rust](../guides/writing-a-plugin-in-rust.md)**
+- **[Writing plugins](./plugins/writing-plugins.md)**
+- **[Writing a plugin in Rust](./guides/writing-a-plugin-in-rust.md)**

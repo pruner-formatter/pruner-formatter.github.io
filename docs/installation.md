@@ -1,11 +1,12 @@
 # Installation
 
-## Homebrew
+## MacOS
 
 ```bash
 brew install pruner-formatter/tap/pruner
 ```
 
-## Binaries
+## Linux
 
-The binaries are also available on every Github release. Check the latest releases to find a binary for your platform.
+You can download the latest binary for your platform via the
+**[Github releases page](https://github.com/pruner-formatter/pruner/releases)**.

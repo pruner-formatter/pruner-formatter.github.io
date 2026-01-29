@@ -67,6 +67,10 @@ export default defineConfig({
             text: "Writing a Plugin in Rust",
             link: "/guides/writing-a-plugin-in-rust",
           },
+          {
+            text: "Using Pruner in Neovim with conform.nvim",
+            link: "/guides/neovim-integration",
+          },
         ],
       },
     ],

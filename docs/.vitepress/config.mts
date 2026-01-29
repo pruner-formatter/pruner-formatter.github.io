@@ -71,6 +71,10 @@ export default defineConfig({
             text: "Using Pruner in Neovim with conform.nvim",
             link: "/guides/neovim-integration",
           },
+          {
+            text: "Improved Clojure Formatting",
+            link: "/guides/improved-clojure-formatting",
+          },
         ],
       },
     ],

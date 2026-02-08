@@ -7,6 +7,7 @@ For this example lets configure Pruner to format the following Markdown document
 JavaScript:
 
 ::: code-group
+
 ````markdown [hello-world.md]
 Hello, 
 world!
@@ -15,6 +16,7 @@ world!
 console.log(  "Hello, world"  )
 ```
 ````
+
 :::
 
 The only external formatter we require for this is `prettier` which conveniently understands how to format both of these
@@ -23,6 +25,7 @@ languages. We also need the Markdown treesitter grammar so that Pruner can parse
 Add the following config to `$XDG_CONFIG_HOME/pruner/config.toml` (or `~/.config/pruner/config.toml`):
 
 ::: code-group
+
 ```toml [~/.config/pruner/config.toml]
 [grammars]
 markdown = "https://github.com/tree-sitter-grammars/tree-sitter-markdown"
@@ -40,6 +43,7 @@ prettier = { cmd = "prettier", args = [
 markdown = ["prettier"]
 javascript = ["prettier"]
 ```
+
 :::
 
 Pruner reads from stdin and writes to stdout.
@@ -50,6 +54,7 @@ cat hello-world.md
 ```
 
 ::: code-group
+
 ````markdown [hello-world.md]
 Hello, world!
 
@@ -57,6 +62,7 @@ Hello, world!
 console.log("Hello, world");
 ```
 ````
+
 :::
 
 And we can see `pruner` has successfully formatted both the outer Markdown document as well as the inner JavaScript code

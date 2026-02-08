@@ -6,6 +6,9 @@ The guide will take you through configuring Pruner to produce much more attracti
 and after comparison of formatting an example snippet of Clojure.
 
 ::: code-group
+
+<!-- pruner-ignore -->
+
 ````clojure [Before]
 (defn find-active-users
   "Fetches all active users from the database. Optionally filters by role. Returns a vector of user maps.
@@ -21,6 +24,8 @@ and after comparison of formatting an example snippet of Clojure.
   (let [query "SELECT id, name, email FROM users WHERE active = true"]
     (jdbc/execute! db [query role])))
 ````
+
+<!-- pruner-ignore -->
 
 ````clojure [After]
 (defn find-active-users
@@ -45,6 +50,7 @@ and after comparison of formatting an example snippet of Clojure.
                  active = true"]
     (jdbc/execute! db [query role])))
 ````
+
 :::
 
 ## Basic Clojure Formatting
@@ -74,6 +80,9 @@ format them as Markdown using `prettier`.
 Take this function with a long docstring containing a Clojure code example:
 
 ::: code-group
+
+<!-- pruner-ignore -->
+
 ````clojure [Before]
 (defn process-user
   "Process a user record by validating their email address, checking their subscription status, and updating their last-login timestamp in the database.
@@ -86,6 +95,8 @@ Take this function with a long docstring containing a Clojure code example:
   [user]
   (-> user validate-email check-subscription update-last-login))
 ````
+
+<!-- pruner-ignore -->
 
 ````clojure [After]
 (defn process-user
@@ -101,6 +112,7 @@ Take this function with a long docstring containing a Clojure code example:
   [user]
   (-> user validate-email check-subscription update-last-login))
 ````
+
 :::
 
 #### Configuration
@@ -216,18 +228,20 @@ The following query matches docstrings in `def`, `defn`, `defn-`, `defmacro`, `d
   (#set! injection.language "markdown"))
 ```
 
-This query contains some pruner-specific query directives like `#offset!` and `#escape`. See [Query
-Directives](../language-injections/query-directives.md) for more details on these directives.
+This query contains some pruner-specific query directives like `#offset!` and `#escape`. See
+[Query Directives](../language-injections/query-directives.md) for more details on these directives.
 
 ## Formatting and Aligning Comments
 
 By default `cljfmt` does not align comments to the rest of the surrounding code. We can fix this by using a Pruner WASM
 plugin.
 
-The [clojure-comment-formatter](https://github.com/pruner-formatter/plugin-clojure-comment-formatter) plugin formats `;;`
-comment blocks and aligns them to the code they describe.
+The [clojure-comment-formatter](https://github.com/pruner-formatter/plugin-clojure-comment-formatter) plugin formats
+`;;` comment blocks and aligns them to the code they describe.
 
 Consider the following code where the comment block is misaligned:
+
+<!-- pruner-ignore -->
 
 ```clojure
 (defn create-user [params]
@@ -267,9 +281,11 @@ clojure = ["cljfmt", "align_comments"]
 SQL queries embedded in Clojure strings can also be formatted. This is useful when working with JDBC and some raw inline
 SQL query strings.
 
+<!-- pruner-ignore -->
+
 ```clojure
 ;; Before
-(def query 
+(def query
   "SELECT id, name, email FROM users WHERE active = true ORDER BY created_at DESC")
 
 ;; After
@@ -333,6 +349,7 @@ clojure = ["cljfmt", "align_comments", "trim_newlines"]
 Here is the complete configuration with everything described above:
 
 ::: code-group
+
 ```toml [~/.config/pruner/config.toml]
 query_paths = ["queries"]
 
@@ -369,6 +386,7 @@ clojure = ["cljfmt", "align_comments", "trim_newlines"]
 markdown = ["prettier", "trim_newlines"]
 sql = ["pg_format", "trim_newlines"]
 ```
+
 :::
 
 ## Using LSP for Root Formatting
@@ -399,7 +417,8 @@ If you are using Neovim, the same injection queries can be used for syntax highl
 `~/.config/nvim/queries/clojure/injections.scm` and your docstrings will be highlighted as Markdown, and SQL strings as
 SQL.
 
-For setting up Pruner as a formatter in Neovim, see [Using Pruner with Neovim and Conform.nvim](./neovim-integration.md).
+For setting up Pruner as a formatter in Neovim, see
+[Using Pruner with Neovim and Conform.nvim](./neovim-integration.md).
 
 Checkout **[this related post](https://julienvincent.io/posts/treesitter-language-injections)** about using TreeSitter
 language injections in Neovim

@@ -37,6 +37,10 @@ export default defineConfig({
             text: "Customizing Injections",
             link: "/language-injections/customizing-injections",
           },
+          {
+            text: "Ignoring Code",
+            link: "/language-injections/ignoring-code",
+          },
         ],
       },
       {

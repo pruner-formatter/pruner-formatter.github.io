@@ -13,5 +13,3 @@ not defined in an official grammar.
 
 Pruner loads language injection queries from the configured query "search paths" by resolving
 `<query_path>/<language>/injections.scm`.
-
-Next: [Customizing Injections](./language-injections/customizing-injections.md).

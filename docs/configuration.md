@@ -259,6 +259,24 @@ markdown = ["prettier", "trim_newlines"]
 rust = [{ formatter = "rustfmt", run_in_injections = false }]
 ```
 
+## `[language_aliases]`
+
+Mapping of `canonical language -> list of aliases`.
+
+Default: `{}`
+
+Pruner uses this when formatting injected regions. If an injected region reports a language name
+that isn't the canonical name you use in `[languages]`, you can map it here.
+
+Example:
+
+```toml
+[language_aliases]
+typescript = ["ts", "tsx"]
+```
+
+If the same alias appears under multiple canonical languages, Pruner will treat that as an error.
+
 ## `[profiles.<name>]`
 
 Profiles are partial config overlays applied with the global `--profile <name>` flag, and can be specified multiple

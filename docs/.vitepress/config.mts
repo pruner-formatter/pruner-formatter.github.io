@@ -79,6 +79,10 @@ export default defineConfig({
             text: "Improved Clojure Formatting",
             link: "/guides/improved-clojure-formatting",
           },
+          {
+            text: "Nix Embeddings",
+            link: "/guides/nix-embeddings",
+          },
         ],
       },
     ],

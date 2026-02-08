@@ -92,15 +92,15 @@ You can also specify a 4-flag form to trim linewise and/or charwise at each end.
 **Parameters**:
 
 - `{capture_id}`
-- `{start_linewise}` ("0" or "1")
-- `{start_charwise}` ("0" or "1")
-- `{end_linewise}` ("0" or "1")
-- `{end_charwise}` ("0" or "1")
+- `{start_linewise}` (0 or 1)
+- `{start_charwise}` (0 or 1)
+- `{end_linewise}` (0 or 1)
+- `{end_charwise}` (0 or 1)
 
 **Example**:
 
 ```query
-(#trim! @injection.content "1" "0" "1" "0")
+(#trim! @injection.content 1 0 1 0)
 ```
 
 ## Query Properties
